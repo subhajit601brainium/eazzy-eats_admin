@@ -1,0 +1,94 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h5 class="box-title">Category Management</h5>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered  table-condensed table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>masjid</th>
+                                        <th>Speaker</th>
+                                        <th>Status</th>
+                                        <th>View Details</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of data">
+                                        <td>{{item.name}}</td>
+                                        <td>{{item.speaker_name}}<br/>{{item.email}}
+                                        </td>
+                                        <td>
+                                            <font color="{{item.status == 'yes' ? 'green' : 'red'}}">{{item.status=='yes' ? 'active' : 'inactive'}}</font>
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary" id="modalprintedit" (click)="getDetails(item)" data-toggle="modal" data-target="#modal-form"
+                                                title="View">
+                                                <i class="fa fa-eye"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="btn btn-sm btn-primary reload" (click)="loadmore()">
+                                <i class="fa fa-repeat"></i>&nbsp; load more</button>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<div class="modal fade" id="modal-form">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">{{pagetitle}}</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <label for=""> Masjid Name:</label> {{item.name}}
+                        </div>
+                        <div class="form-group">
+                            <label for=""> Speaker Name:</label> {{item.speaker_name}}
+                        </div>
+                        <div class="form-group">
+                            <label for="">Email Adress:</label> {{item.email}}
+                        </div>
+                        <div class="form-group">
+                            <label for="">Mobile No:</label> {{item.country_code}} {{item.mobile}}
+                        </div>
+                        <div class="form-group">
+                            <label for="">Address:</label> {{item.address}}
+                        </div>
+                        <div class="form-group" *ngIf="item.profile_image">
+                            <label for="">Profile Image:</label>
+                            <p><img src="{{item.profile_image}}" style="width: 30%" /></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

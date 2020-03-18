@@ -49,13 +49,6 @@
                         </span>
                     </a>
                 </li>                
-                <!-- <li class="treeview">
-                    <a [routerLink]="['/masjid']">
-                        <i class="fa fa-user"></i> <span>Category Management</span>
-                        <span class="pull-right-container">
-                        </span>
-                    </a>
-                </li> -->
                 <li class="treeview">
                     <a href="#">
                       <i class="fa fa-pie-chart"></i>
@@ -65,8 +58,19 @@
                       </span>
                     </a>
                     <ul class="treeview-menu" style="display: none;">
-                      <!-- <li><a [routerLink]="['/masjid']"><i class="fa fa-circle-o"></i> Category List</a></li> -->
-                      <li><a [routerLink]="['/masjid']"><i class="fa fa-circle-o"></i> Category Add</a></li>
+                      <li><a [routerLink]="['/categoryAdd']"><i class="fa fa-circle-o"></i> Category Add</a></li>
+                    </ul>
+                  </li>
+                  <li class="treeview">
+                    <a href="#">
+                      <i class="fa fa-pie-chart"></i>
+                      <span>Restaurant Management</span>
+                      <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                      </span>
+                    </a>
+                    <ul class="treeview-menu" style="display: none;">
+                      <li><a [routerLink]="['/vendorAdd']"><i class="fa fa-circle-o"></i> Restaurant Add</a></li>
                     </ul>
                   </li>
                 <li class="treeview">

@@ -1,0 +1,38 @@
+<div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h5 class="box-title">Category Add</h5>
+                    </div>
+                    <div class="box-body">
+                        <div class="col-xs-6">
+                            <form role="form" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Name</label>
+                                    <input type="text" name="categoryName" class="form-control" id="exampleInputEmail1"
+                                        placeholder="Enter category name" [(ngModel)]="addCategoryData.categoryName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputFile">Image</label>
+                                    <input type="file" name="categoryImage" id="exampleInputFile" style="opacity: 8;"
+                                        [(ngModel)]="addCategoryData.categoryImage"
+                                        (change)="handleFileInput($event)">
+                                </div>
+                                <!-- /.box-body -->
+                                <div class="box-footer">
+                                    <button type="button" class="btn btn-primary"
+                                        (click)="addCategory()">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>

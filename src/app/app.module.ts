@@ -28,6 +28,9 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 
+import { CategoryComponent } from './category/category.component';
+import { VendorComponent } from './vendor/vendor.component';
+
 import { AuthGuard } from './guards/index';
 
 //import { ToastrModule } from 'ngx-toastr';
@@ -42,6 +45,8 @@ import { CKEditorModule } from 'ng2-ckeditor';
     HighlightPipe,
     DashboardComponent,
     MasjidComponent,
+    CategoryComponent,
+    VendorComponent,
     UserComponent,
     SubscriptionComponent,
     SettingComponent,

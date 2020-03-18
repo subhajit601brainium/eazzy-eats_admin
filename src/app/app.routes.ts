@@ -1,7 +1,8 @@
 import { Routes } from '@angular/router';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { MasjidComponent } from './masjid/masjid.component';
+import { CategoryComponent } from './category/category.component';
+import { VendorComponent } from './vendor/vendor.component';
 import { UserComponent } from './user/user.component';
 import { SubscriptionComponent } from './subscription/subscription.component';
 import { SettingComponent } from './setting/setting.component';
@@ -17,11 +18,9 @@ import { AuthGuard } from './guards/index';
 export const rootRouterConfig: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-  { path: 'masjid', component: MasjidComponent, canActivate: [AuthGuard] },
+  { path: 'categoryAdd', component: CategoryComponent, canActivate: [AuthGuard] },
+  { path: 'vendorAdd', component: VendorComponent, canActivate: [AuthGuard] },
   { path: 'user', component: UserComponent, canActivate: [AuthGuard] },
-  { path: 'subscription', component: SubscriptionComponent, canActivate: [AuthGuard] },
-  { path: 'setting', component: SettingComponent, canActivate: [AuthGuard] },
-  { path: 'cms', component: CmsComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'Changepassword', component: ChangepasswordComponent, canActivate: [AuthGuard] },
   { path: 'forgotpassword/:id', component: ForgotpasswordComponent }

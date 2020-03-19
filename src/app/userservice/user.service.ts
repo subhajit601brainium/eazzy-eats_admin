@@ -91,6 +91,18 @@ export class UserService {
       .map((response: Response) => response.json())
       .catch(this._errorHandler);
   }
+
+  //Add Vendor Items
+  addVendorItems(updateData) {
+    let headers = new Headers();
+    this.authHeader(headers);
+    let options = new RequestOptions({ headers: headers });
+    let URL = CONFIG.API_ENDPOINT + 'admin/addItem';
+    return this._http.post(URL, updateData, options)
+      .map((response: Response) => response.json())
+      .catch(this._errorHandler);
+  }
+
   //All subscription type list
   getAllSubscriptionType() {
     let headers = new Headers({ 'Content-Type': 'application/json' });

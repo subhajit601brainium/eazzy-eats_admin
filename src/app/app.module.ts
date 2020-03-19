@@ -35,6 +35,7 @@ import { AuthGuard } from './guards/index';
 
 //import { ToastrModule } from 'ngx-toastr';
 import { CKEditorModule } from 'ng2-ckeditor';
+import { VendoritemsComponent } from './vendoritems/vendoritems.component';
 //import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 
@@ -53,7 +54,8 @@ import { CKEditorModule } from 'ng2-ckeditor';
     CmsComponent,
     LoginComponent,
     ChangepasswordComponent,
-    ForgotpasswordComponent
+    ForgotpasswordComponent,
+    VendoritemsComponent
   ],
   imports: [
     BrowserModule, ToastrModule.forRoot(),

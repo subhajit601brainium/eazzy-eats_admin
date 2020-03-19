@@ -1,0 +1,72 @@
+<div class="content-wrapper">
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="box">
+          <div class="box-body">
+            <form role="form" enctype="multipart/form-data">
+
+              <div class="col-xs-12">
+                <div class="box-header">
+                  <h5 class="box-title"> Add Menu</h5>
+                </div>
+                <hr>
+                <div class="col-xs-6">
+
+                  <div class="form-group">
+                    <label for="itemName">Menu Item</label>
+                    <input type="text" [(ngModel)]="addVendorItems.itemName" name="itemName" class="form-control"
+                      id="itemName" placeholder="Enter Menu Item">
+                  </div>
+                  <div class="form-group">
+                    <label for="categoryId">Add Category</label>
+                    <input type="text" [(ngModel)]="addVendorItems.categoryId" name="categoryId" class="form-control"
+                      id="categoryId" placeholder="Enter Category">
+                  </div>
+                  <div class="form-group">
+                    <label for="menuImage">Menu Image</label>
+                    <input type="file" name="menuImage" style="opacity: 8;" [(ngModel)]="addVendorItems.menuImage"
+                      (change)="restaurantMenuImageInput($event)">
+                  </div>
+                </div>
+                <div class="col-xs-6">
+                  <div class="form-group">
+                    <label for="waitingTime">Waiting Time</label>
+                    <input type="text" name="waitingTime" class="form-control" placeholder="Enter Waiting Time"
+                      [(ngModel)]="addVendorItems.waitingTime">
+                  </div>
+                  <div class="form-group">
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="type" value="VEG" [checked]='true' [(ngModel)]="addVendorItems.type">
+                        VEG
+                      </label>
+                    </div>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="type" value="NON VEG" [(ngModel)]="addVendorItems.type">
+                        NON VEG
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="text" name="price" class="form-control" placeholder="Enter Price"
+                      [(ngModel)]="addVendorItems.price">
+                  </div>
+                  <div class="box-footer" style="margin-top: 25px;">
+                    <button type="button" class="btn btn-primary" (click)="addVendorItemData()">Submit</button>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+  </section>
+  <!-- /.content -->
+</div>

@@ -4,55 +4,141 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="box">
-                    <div class="box-header">
-                        <h5 class="box-title">Restaurant Add</h5>
-                    </div>
+
                     <div class="box-body">
                         <form role="form" enctype="multipart/form-data">
-                            <div class="col-xs-6">
 
-                                <div class="form-group">
-                                    <label for="vendorName">Restaurant Name</label>
-                                    <input type="text" [(ngModel)]="addVendor.vendorName" name="vendor_name" class="form-control" id="vendorName" placeholder="Enter Restaurant Name">
+                            <div class="col-xs-12">
+                                <div class="box-header">
+                                    <h5 class="box-title">Restaurant Information Add</h5>
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInp">Manager Name</label>
-                                    <input type="text" [(ngModel)]="addVendor.managerName" name="manager_name" class="form-control" id="exampleInp" placeholder="Enter Manager name">
-                                </div>
-                                <div class="form-group">
-                                    <label>Restaurant Type</label>
-                                    <select class="form-control select2" style="width: 100%;" [(ngModel)]="addVendor.vendorType"  (change)="restaurantTypeVal($event)">
-                                      <option selected="selected">Non Veg</option>
-                                      <option >Veg</option>
-                                    </select>
-                                  </div>
-                                <div class="form-group">
-                                    <label for="exampleInputFile">Restaurant Logo</label>
-                                    <input type="file" name="vendorLogo" style="opacity: 8;"
-                                        [(ngModel)]="addVendor.vendorLogo" (change)="restaurantLogoInput($event)">
-                                </div>
+                                <hr>
+                                <div class="col-xs-6">
 
+                                    <div class="form-group">
+                                        <label for="vendorName">Restaurant Name</label>
+                                        <input type="text" [(ngModel)]="addVendor.vendorName" name="vendor_name"
+                                            class="form-control" id="vendorName" placeholder="Enter Restaurant Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInp">Manager Name</label>
+                                        <input type="text" [(ngModel)]="addVendor.managerName" name="manager_name"
+                                            class="form-control" id="exampleInp" placeholder="Enter Manager name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="vendorDescription">Short Description</label>
+                                        <input type="text" [(ngModel)]="addVendor.vendorDescription" name="vendorDescription"
+                                            class="form-control" id="vendorDescription" placeholder="Enter Short Description">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputFile">Restaurant Logo</label>
+                                        <input type="file" name="vendorLogo" style="opacity: 8;"
+                                            [(ngModel)]="addVendor.vendorLogo" (change)="restaurantLogoInput($event)">
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label>Restaurant Type</label>
+                                            <select class="form-control select2" style="width: 100%;"
+                                                [(ngModel)]="addVendor.vendorType" (change)="restaurantTypeVal($event)">
+                                                <option selected="selected">Non Veg</option>
+                                                <option>Veg</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label>Restaurant Status</label>
+                                            <select class="form-control select2" style="width: 100%;"
+                                                [(ngModel)]="addVendor.vendorStatus" (change)="restaurantStatusVal($event)">
+                                                <option selected="selected">Active</option>
+                                                <option>Inactive</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Restaurant Email</label>
+                                        <input type="email" name="vendorEmail" class="form-control"
+                                            placeholder="Enter Restaurant Email" [(ngModel)]="addVendor.vendorEmail">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Contact Number</label>
+                                        <input type="text" name="vendorPhone" class="form-control"
+                                            placeholder="Enter Restaurant Contact Number"
+                                            [(ngModel)]="addVendor.vendorPhone">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputFile">Restaurant Banner</label>
+                                        <input type="file" name="vendorBanner" style="opacity: 8;"
+                                            [(ngModel)]="addVendor.vendorBanner"
+                                            (change)="restaurantBannerInput($event)">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="vendorOfferBanner">Restaurant Offer Banner</label>
+                                        <input type="file" name="vendorOfferBanner" style="opacity: 8;"
+                                            [(ngModel)]="addVendor.vendorOfferBanner"
+                                            (change)="restaurantOfferBannerInput($event)"
+                                            multiple >
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Latitude</label>
+                                            <input type="text" name="restaurantLatitude" class="form-control"
+                                                placeholder="Enter Restaurant Latitude"
+                                                [(ngModel)]="addVendor.vendorLatitude">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Longitude</label>
+                                            <input type="text" name="restaurantLongitude" class="form-control"
+                                                placeholder="Enter Restaurant Longitude"
+                                                [(ngModel)]="addVendor.vendorLongitude">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-xs-6">
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Restaurant Email</label>
-                                    <input type="email" name="vendorEmail" class="form-control"
-                                        placeholder="Enter Restaurant Email" [(ngModel)]="addVendor.vendorEmail">
+
+                            <div class="col-xs-12">
+                                <h4 class="box-title">Restaurant Owner Information Add</h4>
+                                <hr>
+                                <div class="col-xs-6">
+                                    <div class="form-group">
+                                        <label for="vendorName">First Name</label>
+                                        <input type="text" [(ngModel)]="addVendor.firstName" name="first_name"
+                                            class="form-control" id="firstName" placeholder="Enter First Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInp">Last Name</label>
+                                        <input type="text" [(ngModel)]="addVendor.lastName" name="last_name"
+                                            class="form-control" id="lastName" placeholder="Enter Last name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email</label>
+                                        <input type="email" name="email" class="form-control"
+                                            placeholder="Enter Owner Email" [(ngModel)]="addVendor.email">
+                                    </div>
+
                                 </div>
-                                <div class="form-group">
-                                    <label for="exampleInputEmail1">Contact Number</label>
-                                    <input type="text" name="vendorPhone" class="form-control"
-                                        placeholder="Enter Restaurant Contact Number" [(ngModel)]="addVendor.vendorPhone">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleInputFile">Restaurant Banner</label>
-                                    <input type="file" name="vendorBanner" style="opacity: 8;"
-                                        [(ngModel)]="addVendor.vendorBanner" (change)="restaurantBannerInput($event)">
-                                </div>
-                                <!-- /.box-body -->
-                                <div class="box-footer">
-                                    <button type="button" class="btn btn-primary"
-                                        (click)="addVendorData()">Submit</button>
+                                <div class="col-xs-6">
+
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Phone Number</label>
+                                        <input type="text" name="phone" class="form-control"
+                                            placeholder="Enter Owner Contact Number" [(ngModel)]="addVendor.phone">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Location/Address</label>
+                                        <input type="text" name="location" class="form-control"
+                                            placeholder="Enter Owner Location" [(ngModel)]="addVendor.location">
+                                    </div>
+                                    <!-- /.box-body -->
+
+                                    <div class="box-footer" style="margin-top: 25px;">
+                                        <button type="button" class="btn btn-primary"
+                                            (click)="addVendorData()">Submit</button>
+                                    </div>
                                 </div>
                             </div>
                         </form>

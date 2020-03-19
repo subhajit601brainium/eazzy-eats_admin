@@ -1768,7 +1768,7 @@
 }
 
 .skin-purple .main-header .navbar {
-    background-color: #1f5422
+    background-color: #64A000
 }
 
 .skin-purple .main-header .navbar .nav>li>a {
@@ -1827,7 +1827,7 @@
 }
 
 .skin-purple .main-header li.user-header {
-    background-color: #1f5422
+    background-color: #64A000
 }
 
 .skin-purple .content-header {
@@ -1857,7 +1857,7 @@
 .skin-purple .sidebar-menu>li:hover>a,
 .skin-purple .sidebar-menu>li.active>a {
     color: #fff;
-    background: #1f5422;
+    background: #64A000;
     border-left-color: #685b04
 }
 
@@ -1924,7 +1924,7 @@
 }
 
 .skin-purple-light .main-header .navbar {
-    background-color: #1f5422
+    background-color: #64A000
 }
 
 .skin-purple-light .main-header .navbar .nav>li>a {
@@ -1972,7 +1972,7 @@
 }
 
 .skin-purple-light .main-header .logo {
-    background-color: #1f5422;
+    background-color: #64A000;
     color: #fff;
     border-bottom: 0 solid transparent
 }
@@ -1982,7 +1982,7 @@
 }
 
 .skin-purple-light .main-header li.user-header {
-    background-color: #1f5422
+    background-color: #64A000
 }
 
 .skin-purple-light .content-header {
@@ -2028,7 +2028,7 @@
 }
 
 .skin-purple-light .sidebar-menu>li.active {
-    border-left-color: #1f5422
+    border-left-color: #64A000
 }
 
 .skin-purple-light .sidebar-menu>li.active>a {

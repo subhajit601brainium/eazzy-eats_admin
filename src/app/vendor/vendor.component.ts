@@ -209,7 +209,7 @@ export class VendorComponent implements OnInit {
                 .subscribe((Response) => {
                     if (Response.success) {
                         this._message.showSuccess(Response.message);
-                        this._router.navigate(['/itemAdd']);
+                        this._router.navigate(['/vendortimesAdd/'+Response.response_data.vendorId]);
                     } else {
                         this._message.showWarning(Response.message)
                     }

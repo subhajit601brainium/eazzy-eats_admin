@@ -150,8 +150,9 @@ export class VendortimesComponent implements OnInit {
         if (addVendrTm.mondaySelected == true) {
             mondayObj['startTime'] = this.getTimeFormat(addVendrTm.mondayTimeStart);
             mondayObj['endTime'] = this.getTimeFormat(addVendrTm.mondayTimeEnd);
+            restaurantTime.push(mondayObj);
         }
-        restaurantTime.push(mondayObj);
+        
 
         //TUESDAY
         var tuesdayObj = {};
@@ -162,8 +163,9 @@ export class VendortimesComponent implements OnInit {
         if (addVendrTm.tuesdaySelected == true) {
             tuesdayObj['startTime'] = this.getTimeFormat(addVendrTm.tuesdayTimeStart);
             tuesdayObj['endTime'] = this.getTimeFormat(addVendrTm.tuesdayTimeEnd);
+            restaurantTime.push(tuesdayObj);
         }
-        restaurantTime.push(tuesdayObj);
+        
 
         //WEDNESDAY
         var wednesdayObj = {};
@@ -174,8 +176,9 @@ export class VendortimesComponent implements OnInit {
         if (addVendrTm.wednesdaySelected == true) {
             wednesdayObj['startTime'] = this.getTimeFormat(addVendrTm.wednesdayTimeStart);
             wednesdayObj['endTime'] = this.getTimeFormat(addVendrTm.wednesdayTimeEnd);
+            restaurantTime.push(wednesdayObj);
         }
-        restaurantTime.push(wednesdayObj);
+        
 
         //THURSDAY
         var thursdayObj = {};
@@ -186,8 +189,9 @@ export class VendortimesComponent implements OnInit {
         if (addVendrTm.thursdaySelected == true) {
             thursdayObj['startTime'] = this.getTimeFormat(addVendrTm.thursdayTimeStart);
             thursdayObj['endTime'] = this.getTimeFormat(addVendrTm.thursdayTimeEnd);
+            restaurantTime.push(thursdayObj);
         }
-        restaurantTime.push(thursdayObj);
+        
 
         //FRIDAY
         var fridayObj = {};
@@ -198,8 +202,9 @@ export class VendortimesComponent implements OnInit {
         if (addVendrTm.fridaySelected == true) {
             fridayObj['startTime'] = this.getTimeFormat(addVendrTm.fridayTimeStart);
             fridayObj['endTime'] = this.getTimeFormat(addVendrTm.fridayTimeEnd);
+            restaurantTime.push(fridayObj);
         }
-        restaurantTime.push(fridayObj);
+        
 
         //SATURDAY
         var saturdayObj = {};
@@ -210,8 +215,9 @@ export class VendortimesComponent implements OnInit {
         if (addVendrTm.saturdaySelected == true) {
             saturdayObj['startTime'] = this.getTimeFormat(addVendrTm.saturdayTimeStart);
             saturdayObj['endTime'] = this.getTimeFormat(addVendrTm.saturdayTimeEnd);
+            restaurantTime.push(saturdayObj);
         }
-        restaurantTime.push(saturdayObj);
+        
 
         //SUNDAY
         var sundayObj = {};
@@ -222,8 +228,9 @@ export class VendortimesComponent implements OnInit {
         if (addVendrTm.sundaySelected == true) {
             sundayObj['startTime'] = this.getTimeFormat(addVendrTm.sundayTimeStart);
             sundayObj['endTime'] = this.getTimeFormat(addVendrTm.sundayTimeEnd);
+            restaurantTime.push(sundayObj);
         }
-        restaurantTime.push(sundayObj);
+        
 
         sendData['customerId'] = localStorage.getItem('adminId')
         sendData['vendorId'] = this.addVendorTime.vendorId
@@ -235,16 +242,12 @@ export class VendortimesComponent implements OnInit {
             .subscribe((Response) => {
                 if (Response.success) {
                     this._message.showSuccess(Response.message);
-                    this._router.navigate(['/itemAdd']);
+                    this._router.navigate(['/itemAdd/'+this.addVendorTime.vendorId]);
                 } else {
                     this._message.showWarning(Response.message)
                 }
             }, (Error) => {
                 this._message.showError(Error.message)
             })
-
-
-
-
     }
 }

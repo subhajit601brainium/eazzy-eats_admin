@@ -20,10 +20,13 @@
                       id="itemName" placeholder="Enter Menu Item">
                   </div>
                   <div class="form-group">
-                    <label for="categoryId">Add Category</label>
-                    <input type="text" [(ngModel)]="addVendorItems.categoryId" name="categoryId" class="form-control"
-                      id="categoryId" placeholder="Enter Category">
-                  </div>
+                    <label>Category</label>
+                    <select class="form-control select2" style="width: 100%;"
+                        [(ngModel)]="addVendorItems.categoryId" (change)="menuCategoryVal($event)">
+                        <!-- <option selected="selected">Select Category</option> -->
+                        <option *ngFor="let category of allCategoryies" [value]="category._id">{{category.categoryName}}</option>
+                    </select>
+                </div>
                   <div class="form-group">
                     <label for="menuImage">Menu Image</label>
                     <input type="file" name="menuImage" style="opacity: 8;" [(ngModel)]="addVendorItems.menuImage"

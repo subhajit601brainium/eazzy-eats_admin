@@ -81,6 +81,17 @@ export class UserService {
       .catch(this._errorHandler);
   }
 
+   //All Category list
+   getAllCategory(data: any) {
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    this.authHeader(headers);
+    let options = new RequestOptions({ headers: headers });
+    let URL = CONFIG.API_ENDPOINT + 'admin/getAllCategories';
+    return this._http.post(URL, data, options)
+      .map((response: Response) => response.json())
+      .catch(this._errorHandler);
+  }
+
   //Add Vendor
   addVendor(updateData) {
     let headers = new Headers();

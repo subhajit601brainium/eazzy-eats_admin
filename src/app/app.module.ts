@@ -11,6 +11,7 @@ import { Broadcaster } from './broadcaster';
 import { HighlightPipe } from './highlight.pipe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MomentModule } from 'angular2-moment';
+import { TimepickerModule } from 'ngx-bootstrap';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MasjidComponent } from './masjid/masjid.component';
@@ -36,6 +37,7 @@ import { AuthGuard } from './guards/index';
 //import { ToastrModule } from 'ngx-toastr';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { VendoritemsComponent } from './vendoritems/vendoritems.component';
+import { VendortimesComponent } from './vendortimes/vendortimes.component';
 //import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 
@@ -55,7 +57,8 @@ import { VendoritemsComponent } from './vendoritems/vendoritems.component';
     LoginComponent,
     ChangepasswordComponent,
     ForgotpasswordComponent,
-    VendoritemsComponent
+    VendoritemsComponent,
+    VendortimesComponent
   ],
   imports: [
     BrowserModule, ToastrModule.forRoot(),
@@ -67,7 +70,8 @@ import { VendoritemsComponent } from './vendoritems/vendoritems.component';
     Ng2DatetimePickerModule,
     BsDatepickerModule.forRoot(),
     MomentModule,
-    RouterModule.forRoot(rootRouterConfig, { useHash: true })
+    RouterModule.forRoot(rootRouterConfig, { useHash: true }),
+    TimepickerModule.forRoot()
   ],
 
   providers: [

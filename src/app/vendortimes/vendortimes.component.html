@@ -1,0 +1,257 @@
+<div class="content-wrapper">
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+
+                    <div class="box-body">
+                        <form role="form" enctype="multipart/form-data">
+                            <div class="col-xs-12">
+                                <h4 class="box-title">Restaurant Opening Time</h4>
+                                <hr>
+                                <div class="col-xs-6">
+                                    <!-- MONDAY -->
+                                    <div class="col-xs-3">
+                                        <div class="form-group">
+                                            <label>
+                                                <input type="checkbox" class="minimal" checked name="mondaySelected"
+                                                    [(ngModel)]="addVendorTime.mondaySelected">
+                                                Monday
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label>Opening Time</label>
+                                            <div class="input-group">
+                                                <input type="time" class="form-control timepicker"
+                                                    name="mondayTimeStart" step="1800" [(ngModel)]="addVendorTime.mondayTimeStart">
+                                            </div>
+                                            <!-- /.input group -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-5">
+                                        <div class="form-group">
+                                            <label>Close Time</label>
+                                            <div class="input-group">
+                                                <input type="time" class="form-control timepicker" step="1800" name="mondayTimeEnd"
+                                                    [(ngModel)]="addVendorTime.mondayTimeEnd">
+                                            </div>
+                                            <!-- /.input group -->
+                                        </div>
+                                    </div>
+                                    <!-- TUESDAY -->
+                                    <div class="col-xs-3">
+                                        <div class="form-group">
+                                            <label>
+                                                <input type="checkbox" class="minimal" checked name="tuesdaySelected"
+                                                    [(ngModel)]="addVendorTime.tuesdaySelected">
+                                                Tuesday
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label>Opening Time</label>
+                                            <div class="input-group">
+                                                <input type="time" class="form-control timepicker"
+                                                    name="tuesdayTimeStart" step="1800" [(ngModel)]="addVendorTime.tuesdayTimeStart">
+                                            </div>
+                                            <!-- /.input group -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-5">
+                                        <div class="form-group">
+                                            <label>Close Time</label>
+                                            <div class="input-group">
+                                                <input type="time" class="form-control timepicker" name="tuesdayTimeEnd"
+                                                step="1800" [(ngModel)]="addVendorTime.tuesdayTimeEnd">
+                                            </div>
+                                            <!-- /.input group -->
+                                        </div>
+                                    </div>
+                                    <!-- WEDNESDAY -->
+                                    <div class="col-xs-3">
+                                        <div class="form-group">
+                                            <label>
+                                                <input type="checkbox" class="minimal" checked name="wednesdaySelected"
+                                                    [(ngModel)]="addVendorTime.wednesdaySelected">
+                                                Wednesday
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label>Opening Time</label>
+                                            <div class="input-group">
+                                                <input type="time" class="form-control timepicker"
+                                                step="1800" name="wednesdayTimeStart" [(ngModel)]="addVendorTime.wednesdayTimeStart">
+                                            </div>
+                                            <!-- /.input group -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-5">
+                                        <div class="form-group">
+                                            <label>Close Time</label>
+                                            <div class="input-group">
+                                                <input type="time" class="form-control timepicker" name="wednesdayTimeEnd"
+                                                step="1800" [(ngModel)]="addVendorTime.wednesdayTimeEnd">
+                                            </div>
+                                            <!-- /.input group -->
+                                        </div>
+                                    </div>
+                                     <!-- THURSDAY -->
+                                     <div class="col-xs-3">
+                                        <div class="form-group">
+                                            <label>
+                                                <input type="checkbox" class="minimal" checked name="thursdaySelected"
+                                                    [(ngModel)]="addVendorTime.thursdaySelected">
+                                                Thursday
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label>Opening Time</label>
+                                            <div class="input-group">
+                                                <input type="time" class="form-control timepicker"
+                                                step="1800" name="thursdayTimeStart" [(ngModel)]="addVendorTime.thursdayTimeStart">
+                                            </div>
+                                            <!-- /.input group -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-5">
+                                        <div class="form-group">
+                                            <label>Close Time</label>
+                                            <div class="input-group">
+                                                <input type="time" class="form-control timepicker" name="thursdayTimeEnd"
+                                                step="1800" [(ngModel)]="addVendorTime.thursdayTimeEnd">
+                                            </div>
+                                            <!-- /.input group -->
+                                        </div>
+                                    </div>
+
+                                    
+
+                                    
+
+                                </div>
+
+                                <div class="col-xs-6">
+                                    <!-- FRIDAY -->
+                                    <div class="col-xs-3">
+                                        <div class="form-group">
+                                            <label>
+                                                <input type="checkbox" class="minimal" checked name="fridaySelected"
+                                                    [(ngModel)]="addVendorTime.fridaySelected">
+                                                Friday
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label>Opening Time</label>
+                                            <div class="input-group">
+                                                <input type="time" class="form-control timepicker"
+                                                step="1800" name="fridayTimeStart" [(ngModel)]="addVendorTime.fridayTimeStart">
+                                            </div>
+                                            <!-- /.input group -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-5">
+                                        <div class="form-group">
+                                            <label>Close Time</label>
+                                            <div class="input-group">
+                                                <input type="time" class="form-control timepicker" name="fridayTimeEnd"
+                                                step="1800" [(ngModel)]="addVendorTime.fridayTimeEnd">
+                                            </div>
+                                            <!-- /.input group -->
+                                        </div>
+                                    </div>
+                                    <!-- SATURDAY -->
+                                    <div class="col-xs-3">
+                                        <div class="form-group">
+                                            <label>
+                                                <input type="checkbox" class="minimal" checked name="saturdaySelected"
+                                                    [(ngModel)]="addVendorTime.saturdaySelected">
+                                                Saturday
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label>Opening Time</label>
+                                            <div class="input-group">
+                                                <input type="time" class="form-control timepicker"
+                                                step="1800" name="saturdayTimeStart" [(ngModel)]="addVendorTime.saturdayTimeStart">
+                                            </div>
+                                            <!-- /.input group -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-5">
+                                        <div class="form-group">
+                                            <label>Close Time</label>
+                                            <div class="input-group">
+                                                <input type="time" class="form-control timepicker" name="saturdayTimeEnd"
+                                                step="1800" [(ngModel)]="addVendorTime.saturdayTimeEnd">
+                                            </div>
+                                            <!-- /.input group -->
+                                        </div>
+                                    </div>
+
+                                    <!-- SUNDAY -->
+                                    <div class="col-xs-3">
+                                        <div class="form-group">
+                                            <label>
+                                                <input type="checkbox" class="minimal" checked name="sundaySelected"
+                                                    [(ngModel)]="addVendorTime.sundaySelected">
+                                                Sunday
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label>Opening Time</label>
+                                            <div class="input-group">
+                                                <input type="time" class="form-control timepicker"
+                                                step="1800" name="sundayTimeStart" [(ngModel)]="addVendorTime.sundayTimeStart">
+                                            </div>
+                                            <!-- /.input group -->
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-5">
+                                        <div class="form-group">
+                                            <label>Close Time</label>
+                                            <div class="input-group">
+                                                <input type="time" class="form-control timepicker" name="sundayTimeEnd"
+                                                step="1800" [(ngModel)]="addVendorTime.sundayTimeEnd">
+                                            </div>
+                                            <!-- /.input group -->
+                                        </div>
+                                    </div>
+
+               
+                                    <div class="box-footer" style="margin-top: 25px;">
+                                        <button type="button" class="btn btn-primary"
+                                            (click)="addVendorTimeData()">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>

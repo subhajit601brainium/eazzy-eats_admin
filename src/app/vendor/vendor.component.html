@@ -35,25 +35,18 @@
                                         <input type="file" name="vendorLogo" style="opacity: 8;"
                                             [(ngModel)]="addVendor.vendorLogo" (change)="restaurantLogoInput($event)">
                                     </div>
-                                    <div class="col-xs-6">
-                                        <div class="form-group">
-                                            <label>Restaurant Type</label>
-                                            <select class="form-control select2" style="width: 100%;"
-                                                [(ngModel)]="addVendor.vendorType" (change)="restaurantTypeVal($event)">
-                                                <option selected="selected">Non Veg</option>
-                                                <option>Veg</option>
-                                            </select>
-                                        </div>
+                                    <div class="form-group">
+                                        <label for="vendorLicense">Restaurant License</label>
+                                        <input type="file" name="vendorLicense" style="opacity: 8;"
+                                            [(ngModel)]="addVendor.vendorLicense" (change)="restaurantLicenseInput($event)">
                                     </div>
-                                    <div class="col-xs-6">
-                                        <div class="form-group">
-                                            <label>Restaurant Status</label>
-                                            <select class="form-control select2" style="width: 100%;"
-                                                [(ngModel)]="addVendor.vendorStatus" (change)="restaurantStatusVal($event)">
-                                                <option selected="selected">Active</option>
-                                                <option>Inactive</option>
-                                            </select>
-                                        </div>
+                                    <div class="form-group">
+                                        <label>Restaurant Type</label>
+                                        <select class="form-control select2" style="width: 100%;"
+                                            [(ngModel)]="addVendor.vendorType" (change)="restaurantTypeVal($event)">
+                                            <option selected="selected">Non Veg</option>
+                                            <option>Veg</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-xs-6">
@@ -96,6 +89,14 @@
                                                 placeholder="Enter Restaurant Longitude"
                                                 [(ngModel)]="addVendor.vendorLongitude">
                                         </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Restaurant Status</label>
+                                        <select class="form-control select2" style="width: 100%;"
+                                            [(ngModel)]="addVendor.vendorStatus" (change)="restaurantStatusVal($event)">
+                                            <option selected="selected">Active</option>
+                                            <option>Inactive</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>

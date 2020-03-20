@@ -21,6 +21,7 @@ export class AddVendorData {
     vendorStatus: string;
     vendorDescription: string;
     vendorOfferBanner: string;
+    vendorLicense: string;
     //Vendor Owner Information Add
     firstName: string;
     lastName: string;
@@ -40,6 +41,7 @@ export class VendorComponent implements OnInit {
     admintoken: any;
     restaurantLogo: File = null;
     restaurantBanner: File = null;
+    restaurantLicense: File = null;
     restaurantOfferBanner: File = null;
     restaurantVal: String = 'NON VEG';
     restaurantStatus: String = 'ACTIVE';
@@ -71,6 +73,7 @@ export class VendorComponent implements OnInit {
             vendorStatus: '',
             vendorDescription: '',
             vendorOfferBanner: '',
+            vendorLicense: '',
             customerId: '',
             firstName: '',
             lastName: '',
@@ -85,6 +88,12 @@ export class VendorComponent implements OnInit {
     restaurantBannerInput(event) {
         console.log(event);
         this.restaurantBanner = <File>event.target.files[0];
+
+    }
+
+    restaurantLicenseInput(event) {
+        console.log(event);
+        this.restaurantLicense = <File>event.target.files[0];
 
     }
 
@@ -137,6 +146,9 @@ export class VendorComponent implements OnInit {
         } else if (this.addVendor.vendorOfferBanner.trim() == '') {
             var errorMessage = 'Please select restaurant offer banner.';
             this._message.showError(errorMessage);
+        } else if (this.addVendor.vendorLicense.trim() == '') {
+            var errorMessage = 'Please select restaurant license.';
+            this._message.showError(errorMessage);
         } else if (this.addVendor.vendorLatitude.trim() == '') {
             var errorMessage = 'Please select restaurant latitude.';
             this._message.showError(errorMessage);
@@ -179,6 +191,7 @@ export class VendorComponent implements OnInit {
             fm.append('logo', this.restaurantLogo, this.restaurantLogo.name);
             fm.append('banner', this.restaurantBanner, this.restaurantBanner.name);
             fm.append('offer_banner', this.restaurantOfferBanner, this.restaurantOfferBanner.name);
+            fm.append('licenceImage', this.restaurantLicense, this.restaurantLicense.name);
             
 
             fm.append('latitude', addVendorData.vendorLatitude);
